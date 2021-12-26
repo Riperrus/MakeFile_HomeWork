@@ -1,0 +1,9 @@
+all: make1.exe
+func1.o: func1.c
+	gcc -c -o func1.o func1.c
+func21.o: func21.c
+	gcc -c -o func21.o func21.c
+main.o: main.c
+	gcc -c -o main.o main.c
+make1.exe: main.o func1.o func21.o
+	gcc -o make1.exe func1.o func21.o main.o
